@@ -15,7 +15,7 @@ namespace rc907613_mis4200.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "A History of North Star Games";
 
             return View();
         }
