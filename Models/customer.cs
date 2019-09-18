@@ -2,25 +2,23 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-
-namespace rc907613_mis4200.Models
+namespace rc907613_MIS4200.Models
 {
-    public class customer
+    public class Customer
     {
-        public int customerId { get; set; }
-        //primary key by default, will pick ID first, and then after that it will look for a classId (customerId)
-        public int firstName { get; set; }
-        public int lastName { get; set; }
+        public int customerID { get; set; }
+        public string firstName { get; set; }
+        public string lastName { get; set; }
         public string email { get; set; }
         public string phone { get; set; }
         public DateTime customerSince { get; set; }
-
-        //customer can have many orders
-
-        public ICollection<customerOrder> orders { get; set; }
-
-        //ICollection I: Interface
-        //if you see <> it wants a data type. In this case order from our order class
-        //this will show all orders placed by this customer
+        // add any other fields as appropriate
+        // a customer can have any number of orders, a 1:M relationship,
+        // We represent this in the model with an ICollection
+        // The syntax says we are creating an ICollection of Order objects,
+        // (the name inside the <> is the object name),
+        // and the local name of the collection will be Order
+        // (the object name and the local name do not have to be the same)
+        public ICollection<Order> Order { get; set; }
     }
 }
