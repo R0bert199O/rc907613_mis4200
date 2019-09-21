@@ -1,0 +1,39 @@
+﻿@model IEnumerable<rc907613_mis4200.Models.Event>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Attendee.firstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ticket.eventName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Attendee.firstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ticket.eventName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.eventID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.eventID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.eventID })
+        </td>
+    </tr>
+}
+
+</table>

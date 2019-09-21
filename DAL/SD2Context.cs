@@ -16,7 +16,7 @@ namespace rc907613_mis4200.DAL
 
         public DbSet<Attendee> Attendees { get; set; }
         public DbSet<Ticket> Tickets { get; set; }
-        public DbSet<Event> Event { get; set; }
+        public DbSet<Event> Events { get; set; }
 
 
 
