@@ -18,7 +18,7 @@ namespace rc907613_mis4200.Controllers
         // GET: Events
         public ActionResult Index()
         {
-            var events = db.Events.Include(@ => @.Attendee).Include(@ => @.Ticket);
+            var events = db.Events.Include(e => e.Attendee).Include(e => e.Ticket);
             return View(events.ToList());
         }
 
