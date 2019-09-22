@@ -11,13 +11,13 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Attendee.firstName)
+            @Html.DisplayNameFor(model => model.Attendee.fullName)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Attendee.firstName)
+            @Html.DisplayFor(model => model.Attendee.fullName)
         </dd>
-
+        
         <dt>
             @Html.DisplayNameFor(model => model.Ticket.eventName)
         </dt>
@@ -25,6 +25,31 @@
         <dd>
             @Html.DisplayFor(model => model.Ticket.eventName)
         </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ticket.eventDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ticket.eventDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ticket.eventLocation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ticket.eventLocation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ticket.eventDuration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ticket.eventDuration)
+        </dd>
+
 
     </dl>
 </div>

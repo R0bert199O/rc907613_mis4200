@@ -10,6 +10,8 @@ namespace rc907613_mis4200.Models
         public int attendeeID { get; set; }
         public string firstName { get; set; }
         public string lastName { get; set; }
+
+        public string fullName { get { return lastName + ", " + firstName; } }
         public string address { get; set; }
         public string city { get; set; }
         public string state { get; set; }

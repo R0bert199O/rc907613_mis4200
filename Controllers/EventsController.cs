@@ -40,7 +40,8 @@ namespace rc907613_mis4200.Controllers
         // GET: Events/Create
         public ActionResult Create()
         {
-            ViewBag.attendeeID = new SelectList(db.Attendees, "attendeeID", "firstName");
+            //ViewBag.attendeeID = new SelectList(db.Attendees, "attendeeID", "firstName");
+            ViewBag.attendeeID = new SelectList(db.Attendees, "attendeeID", "fullName");
             ViewBag.ticketID = new SelectList(db.Tickets, "ticketID", "eventName");
             return View();
         }
@@ -76,7 +77,8 @@ namespace rc907613_mis4200.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.attendeeID = new SelectList(db.Attendees, "attendeeID", "firstName", @event.attendeeID);
+            //ViewBag.attendeeID = new SelectList(db.Attendees, "attendeeID", "firstName", @event.attendeeID);
+            ViewBag.attendeeID = new SelectList(db.Attendees, "attendeeID", "fullName", @event.attendeeID);
             ViewBag.ticketID = new SelectList(db.Tickets, "ticketID", "eventName", @event.ticketID);
             return View(@event);
         }
