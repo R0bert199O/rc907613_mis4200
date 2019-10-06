@@ -22,3 +22,19 @@ select,
 textarea {
     max-width: 280px;
 }
+
+/* change the striped background colors*/
+.table-striped > tbody > tr:nth-child(2n+1) > td {
+    background-color: palegoldenrod;
+    font-weight: bold
+}
+
+.table-striped > tbody > tr:nth-child(2n+2) > td {
+    background-color: lightgray;
+    font-weight: bold;
+}
+
+/*change the table hover color*/
+.table-hover tbody tr:hover td {
+    background-color: white;
+}

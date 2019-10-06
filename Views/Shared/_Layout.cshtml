@@ -24,9 +24,16 @@
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Attendees", "Index", "Attendees")</li>
-                    <li>@Html.ActionLink("Tickets", "Index", "Tickets")</li>
-                    <li>@Html.ActionLink("Events", "Index", "Events")</li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Convention Information
+                            <span class="caret"></span></a>
+                        <ul class="dropdown-menu nav navbar-nav navbar-inverse">
+                            <li>@Html.ActionLink("Attendees", "Index", "Attendees")</li>
+                            <li>@Html.ActionLink("Tickets", "Index", "Tickets")</li>
+                            <li>@Html.ActionLink("Events", "Index", "Events")</li>
+                        </ul>
+                    </li>
+                    
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
