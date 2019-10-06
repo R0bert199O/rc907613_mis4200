@@ -1,10 +1,10 @@
 ﻿@model rc907613_mis4200.Models.Attendee
 
 @{
-    ViewBag.Title = "Edit";
+    ViewBag.Title = "Edit Attendee Information";
 }
 
-<h2>Edit</h2>
+    <h2>Edit Information for Attendee: @Html.DisplayFor(model => model.fullName)</h2>
 
 
 @using (Html.BeginForm())
@@ -12,7 +12,7 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>Attendee</h4>
+       
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         @Html.HiddenFor(model => model.attendeeID)

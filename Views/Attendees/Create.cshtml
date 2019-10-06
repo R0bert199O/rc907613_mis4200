@@ -1,10 +1,10 @@
 ﻿@model rc907613_mis4200.Models.Attendee
 
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Add New Attendee";
 }
 
-<h2>Create</h2>
+    <h2>Add New Attendee</h2>
 
 
 @using (Html.BeginForm()) 
@@ -12,7 +12,7 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>Attendee</h4>
+        
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
